@@ -45,6 +45,8 @@ const Home: NextPage = () => {
       if (input.startsWith("/")) {
         switch (input.split(" ")[0].replace("/", "").toLocaleLowerCase()) {
           case "name":
+            if (input.split("/name ")[1].toString().length > 30)
+              return toast.error("name too long");
             setUser(input.split("/name ")[1].toString());
             break;
           case "color":

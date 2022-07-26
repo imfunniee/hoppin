@@ -52,11 +52,16 @@
   height: calc(100vh - 10.65rem);
   max-height: calc(100vh - 10.65rem);
   overflow-y: hidden;
+  overflow-x: hidden;
   padding: 1rem 1rem;
   font-size: 1em;
 
   display: flex;
   flex-direction: column-reverse;
+
+  div {
+    word-wrap: break-word;
+  }
 
   span {
     opacity: 0.58;
